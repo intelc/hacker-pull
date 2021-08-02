@@ -4,17 +4,17 @@
 
 ## Installation 
 
-
-1. Clone git repository.
-2. run `npm init` in download directory to install dependencies
-
+<ol>
+<li>Clone git repository</li>
+<li>run `npm init` in download directory to install dependencies</li>
+</ol>
 ##Features
 
 ###Print Current Top 10 Articles
-
-1. run `node ./server` to start the express server
-2. run `npm run start` to start the react dev server 
-
+<ol>
+<li>run `node ./server` to start the express server</li>
+<li>run `npm run start` to start the react dev server </li>
+</ol>
 ####Method 1: 
 Open [http://localhost:3000](http://localhost:3000) react front end calls custom api and pretty-prints.
 
