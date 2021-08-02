@@ -1,4 +1,6 @@
 # HackerNews Auto Fetching App
+
+![Screenshot](./screenshot.png)
 ## Installation 
 1.Clone git repository
 2.run `npm init` in download directory to install dependencies
