@@ -1,4 +1,4 @@
-# HackerNews auto fetching app
+# HackerNews Auto Fetching App
 ## Installation 
 1.Clone git repository
 2.run `npm init` in download directory to install dependencies
