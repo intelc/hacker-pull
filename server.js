@@ -6,22 +6,26 @@ const fetchHacker =require('./scraper.js')
 var cron = require('node-cron');
 var cors = require('cors')
 
-
+//node cron scheduler that called fetch code every 2 hours
 cron.schedule('* */2 * * *', async () => {
     console.log('running a task every two hours');
     const result = await fetchHacker()
     console.log(result)
   }); 
+
+//boring setup stuff
 server.use(cors())  
 server.use(express.json())
 server.use(express.urlencoded({ extended: false }));
 
+//backend api route
 server.use('/api', UsRouter);
+//backend root route - not usede
 server.get('/', (req, res) => {
     res.send('hello world')
 });
 
-//server.use(express.static(path.join(__dirname, '/build')))
+
 
 
 const PORT = process.env.PORT || 5000 ;

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import {useState,useEffect} from 'react'
@@ -8,6 +7,7 @@ function App() {
 
   const [data,setData]=useState("")
   
+  // Updates frontend state using hooks
   useEffect(() => {
     const getData = async()=>{
       const dataFromServer = await pullData()
@@ -17,7 +17,8 @@ function App() {
     getData()
 
   }, [])
-
+  
+  // Data fetching async function
   const pullData = async ()=>{
     const res =await fetch('http://localhost:5000/api/latest',{methods:'GET'})
     console.log('fetched')

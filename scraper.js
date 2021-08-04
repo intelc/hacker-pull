@@ -3,8 +3,10 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 const fetchHacker = async()=>{
+
     const BASE_URL = 'https://news.ycombinator.com/';
-    
+    // Fetch data with Axios (luckily no need for puppeteer here)
+    // and read into correct JSON format
     const getNews = async () => {
         try {
             const response = await axios.get(`${BASE_URL}`);
@@ -64,6 +66,7 @@ const fetchHacker = async()=>{
 
                 list.push({ 'title': title, 'by': by, 'points': points, 'comments': comments, 'url': url })
             }
+            // Sort list based on points, descending
             list.sort(function (a, b) {
                 var keyA = Number(a['points']),
                     keyB = Number(b['points']);
